@@ -92,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (checkedCount === 0) {
             e.target.checked = true;
         }
-        displayNewPassword();
     }
 
     // --- Lógica del Tema ---
