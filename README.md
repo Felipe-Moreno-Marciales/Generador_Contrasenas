@@ -1,6 +1,7 @@
 # 🔐 Generador de Contraseñas 
 
-¡Bienvenido/a al Generador de Contraseñas realizado por Felipe Moreno Marciales, para aportar a la seguridad!  
+¡Bienvenido/a al Generador de Contraseñas realizado por Felipe Moreno Marciales, con el fin de aportar a la seguridad!  
+
 Crea contraseñas fuertes, personalizadas y copia al portapapeles con un solo clic.  
 ¡Con soporte para modo claro/oscuro y accesibilidad! 🌗✨
 
