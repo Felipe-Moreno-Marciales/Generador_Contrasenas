@@ -11,8 +11,8 @@ Crea contraseñas fuertes, personalizadas y copia al portapapeles con un solo cl
 
 - 🎲 **Generación aleatoria segura** (usa la API de criptografía del navegador)
 - 🛡️ **Personaliza tu contraseña**:  
-  - Longitud (8 a 32 caracteres)
-  - Mayúsculas, minúsculas, números y símbolos
+  -- Longitud (8 a 32 caracteres)
+  -- Mayúsculas, minúsculas, números y símbolos
 - 🌙 **Modo claro/oscuro** con animación visual
 - 📋 **Copia al portapapeles** con feedback visual y accesible
 - ♿ **Accesibilidad**: compatible con lectores de pantalla
