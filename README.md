@@ -71,7 +71,7 @@ Generador_Contrasenas/
 
 Solo abre el siguiente enlace en tu navegador favorito:
 
-[**https://felipe-moreno-marciales.github.io/Generador_Contrasenas/**](https://felipe-moreno-marciales.github.io/Generador_Contrasenas/)
+<a href="https://felipe-moreno-marciales.github.io/Generador_Contrasenas/" target="_blank" rel="noopener noreferrer"><strong>https://felipe-moreno-marciales.github.io/Generador_Contrasenas/</strong></a>
 
 ¡No requiere instalación ni dependencias externas!
 
