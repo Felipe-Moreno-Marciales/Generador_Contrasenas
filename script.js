@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Referencias a los elementos del DOM ---
+    // Elementos de la UI
     const passwordOutput = document.getElementById('passwordOutput');
     const copyButton = document.getElementById('copyButton');
     const copyButtonText = document.getElementById('copyButtonText');
@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateButton = document.getElementById('generateButton');
     const optionsCheckboxes = document.querySelectorAll('.options-grid input[type="checkbox"]');
     const statusAnnouncer = document.getElementById('status-announcer');
-    
+    const strengthText = document.getElementById('strength-indicator-text');
+
     // Elementos del tema
     const themeSwitchCheckbox = document.querySelector('.theme-switch__checkbox');
     const body = document.body;
@@ -58,6 +59,46 @@ document.addEventListener('DOMContentLoaded', () => {
         return password;
     }
 
+    function checkPasswordStrength(password) {
+        let score = 0;
+        const length = password.length;
+
+        // Contar cuántos tipos de caracteres están seleccionados
+        let checkedOptions = [includeUppercase, includeLowercase, includeNumbers, includeSymbols].filter(el => el.checked).length;
+
+        // Regla especial: si solo hay un tipo de caracter y la longitud es baja, es "Muy Débil"
+        if (checkedOptions === 1 && length >= 8 && length <= 12) {
+            score = 1; // Forzar el nivel más bajo
+        } else if (!password) {
+            score = 0;
+        } else {
+            // Lógica de puntuación existente
+            if (length >= 12) score++;
+            if (length >= 16) score++;
+            if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++;
+            if (/\d/.test(password)) score++;
+            if (/[^A-Za-z0-9]/.test(password)) score++;
+            // Pequeño bonus si cumple con los requisitos mínimos
+            if (length >= 8 && score > 0) score++;
+        }
+
+        const strengthLevels = {
+            0: { text: '', width: '0%', color: '#dc3545' },
+            1: { text: 'Muy Débil', width: '20%', color: '#dc3545' },
+            2: { text: 'Débil', width: '40%', color: '#fd7e14' },
+            3: { text: 'Media', width: '60%', color: '#ffc107' },
+            4: { text: 'Fuerte', width: '80%', color: '#28a745' },
+            5: { text: 'Muy Fuerte', width: '100%', color: '#20c997' },
+            6: { text: 'Excelente', width: '100%', color: '#17a2b8' }
+        };
+        
+        const { text, width, color } = strengthLevels[score];
+        
+        document.documentElement.style.setProperty('--strength-bar-width', width);
+        document.documentElement.style.setProperty('--strength-bar-color', color);
+        strengthText.textContent = text;
+    }
+
     async function copyPasswordToClipboard() {
         if (!passwordOutput.value) return;
         try {
@@ -82,8 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const newPassword = generatePassword();
         if (newPassword) {
             passwordOutput.value = newPassword;
+            checkPasswordStrength(newPassword);
         } else {
             passwordOutput.value = '';
+            checkPasswordStrength('');
         }
     }
 
