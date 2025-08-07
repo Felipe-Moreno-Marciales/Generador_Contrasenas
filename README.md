@@ -80,6 +80,6 @@ MIT
 
 ---
 
-¿Te gustó? ¡Dale una estrella ⭐ y comparte para la seguridad de todos!!!
+¿Te gustó? ¡Dale una estrella ⭐ y comparte para la seguridad de todos!
 
 ---
