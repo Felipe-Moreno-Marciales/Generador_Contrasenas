@@ -13,6 +13,7 @@ Crea contraseñas fuertes, personalizadas y copia al portapapeles con un solo cl
 - 🛡️ **Personaliza tu contraseña**:  
   - Longitud (8 a 32 caracteres)
   - Mayúsculas, minúsculas, números y símbolos
+- 📊 **Indicador de Calidad de Contraseña:** Evalúa y muestra visualmente la fortaleza de cada contraseña generada (de "Muy Débil" a "Excelente").
 - 🌙 **Modo claro/oscuro** con animación visual
 - 📋 **Copia al portapapeles** con feedback visual y accesible
 - ♿ **Accesibilidad**: compatible con lectores de pantalla
@@ -32,7 +33,8 @@ Crea contraseñas fuertes, personalizadas y copia al portapapeles con un solo cl
 1. **Elige la longitud** de la contraseña con el slider.
 2. **Selecciona los tipos de caracteres** que quieres incluir.
 3. Haz clic en **"Generar Contraseña"**.
-4. Presiona **"Copiar"** para guardar la contraseña en tu portapapeles.
+4. Observa la **calidad de la contraseña** en el indicador.
+5. Presiona **"Copiar"** para guardar la contraseña en tu portapapeles.
 
 ---
 
