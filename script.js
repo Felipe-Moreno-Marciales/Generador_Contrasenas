@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const statusAnnouncer = document.getElementById('status-announcer');
     const strengthText = document.getElementById('strength-indicator-text');
 
-    // Elementos del tema
+    // Elementos del tema y color
     const themeSwitchCheckbox = document.querySelector('.theme-switch__checkbox');
+    const accentColorRadios = document.querySelectorAll('input[name="accent-color"]');
     const body = document.body;
 
     // --- Constantes ---
@@ -137,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Lógica del Tema ---
+    // --- Lógica del Tema y Color ---
     
     function applyTheme(theme) {
         body.setAttribute('data-theme', theme);
@@ -150,6 +151,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleTheme() {
         const newTheme = themeSwitchCheckbox.checked ? 'dark' : 'light';
         applyTheme(newTheme);
+    }
+
+    function applyAccentColor(color) {
+        body.setAttribute('data-accent-color', color);
+        localStorage.setItem('accentColor', color);
+        const radioToSelect = document.getElementById(`color-${color}`);
+        if (radioToSelect) {
+            radioToSelect.checked = true;
+        }
     }
 
     // --- Asignación de Eventos ---
@@ -170,6 +180,12 @@ document.addEventListener('DOMContentLoaded', () => {
         themeSwitchCheckbox.addEventListener('change', toggleTheme);
     }
     
+    accentColorRadios.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            applyAccentColor(e.target.value);
+        });
+    });
+
     document.querySelectorAll('.option').forEach(optionDiv => {
         optionDiv.addEventListener('click', (e) => {
             if (e.target.tagName !== 'INPUT') {
@@ -182,6 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Inicialización ---
     const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedAccentColor = localStorage.getItem('accentColor') || 'purple';
     applyTheme(savedTheme);
+    applyAccentColor(savedAccentColor);
     displayNewPassword();
 });

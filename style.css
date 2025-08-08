@@ -32,6 +32,14 @@ body[data-theme="light"] {
     --border-color: var(--border-light);
 }
 
+/* Colores de acento para tema claro */
+body[data-theme="light"][data-accent-color="purple"] { --accent: #4f46e5; --accent-hover: #4338ca; }
+body[data-theme="light"][data-accent-color="blue"]   { --accent: #2563eb; --accent-hover: #1d4ed8; }
+body[data-theme="light"][data-accent-color="green"]  { --accent: #16a34a; --accent-hover: #15803d; }
+body[data-theme="light"][data-accent-color="orange"] { --accent: #ea580c; --accent-hover: #c2410c; }
+body[data-theme="light"][data-accent-color="pink"]   { --accent: #db2777; --accent-hover: #be185d; }
+
+
 body[data-theme="dark"] {
     --bg: var(--bg-dark);
     --surface: var(--surface-dark);
@@ -41,6 +49,13 @@ body[data-theme="dark"] {
     --accent-hover: var(--accent-hover-dark);
     --border-color: var(--border-dark);
 }
+
+/* Colores de acento para tema oscuro */
+body[data-theme="dark"][data-accent-color="purple"] { --accent: #6366f1; --accent-hover: #4f46e5; }
+body[data-theme="dark"][data-accent-color="blue"]   { --accent: #3b82f6; --accent-hover: #2563eb; }
+body[data-theme="dark"][data-accent-color="green"]  { --accent: #22c55e; --accent-hover: #16a34a; }
+body[data-theme="dark"][data-accent-color="orange"] { --accent: #f97316; --accent-hover: #ea580c; }
+body[data-theme="dark"][data-accent-color="pink"]   { --accent: #ec4899; --accent-hover: #db2777; }
 
 /* --- Estilos Base --- */
 body {
@@ -239,6 +254,50 @@ input[type="range"]::-moz-range-thumb {
 .options-grid input[type="checkbox"]:checked::before {
     transform: scale(1);
 }
+
+/* --- Selector de Color de Acento --- */
+.color-picker-container {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+.color-picker-title {
+    text-align: center;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin: 0 0 1rem 0;
+}
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.color-options input[type="radio"] {
+    display: none; /* Ocultamos el radio button real */
+}
+.color-option {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid var(--surface);
+    box-shadow: 0 0 0 1px var(--border-color);
+    transition: all 0.2s ease;
+}
+.color-option:hover {
+    transform: scale(1.1);
+}
+.color-options input[type="radio"]:checked + .color-option {
+    box-shadow: 0 0 0 3px var(--accent);
+}
+
+/* Asignación de colores a las opciones */
+.color-option[data-color="purple"] { background-color: #6366f1; }
+.color-option[data-color="blue"]   { background-color: #3b82f6; }
+.color-option[data-color="green"]  { background-color: #22c55e; }
+.color-option[data-color="orange"] { background-color: #f97316; }
+.color-option[data-color="pink"]   { background-color: #ec4899; }
+
 
 /* --- Indicador de Fortaleza --- */
 #strength-indicator-container {

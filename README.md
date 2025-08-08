@@ -60,6 +60,7 @@ Generador_Contrasenas/
 
 ## 👨‍💻 Accesibilidad y UX
 
+- **Selector de Color:** Elige entre 5 vibrantes colores de acento para personalizar la interfaz.
 - Anuncios para lectores de pantalla (aria-live)
 - Botones grandes y claros
 - Contraste alto y modo oscuro/ligero
@@ -74,9 +75,9 @@ Generador_Contrasenas/
 
 ---
 
-## 📄 Licencia
+## � Licencia
 
-MIT
+Este proyecto está bajo la Licencia **GPL-3.0**. Consulta el archivo `LICENSE` para más detalles.
 
 ---
 
