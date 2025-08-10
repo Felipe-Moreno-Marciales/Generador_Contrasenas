@@ -23,7 +23,7 @@ Crea contraseñas fuertes, personalizadas y copia al portapapeles con un solo cl
 
 ## 🖥️ Vista previa
 
-<img width="587" height="901" alt="image" src="https://github.com/user-attachments/assets/6842ab53-4f74-4a36-b06a-e8045d5cba9c" />
+<img width="499" height="853" alt="image" src="https://github.com/user-attachments/assets/9ee5f404-8b2d-45ad-b27a-3ab755b836d6" />
 
 ---
 
@@ -65,6 +65,7 @@ Generador_Contrasenas/
 - Botones grandes y claros
 - Contraste alto y modo oscuro/ligero
 - Navegación por teclado
+- Consejo de Seguridad
 
 ---
 
