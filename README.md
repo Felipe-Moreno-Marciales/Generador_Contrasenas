@@ -68,6 +68,12 @@ Generador_Contrasenas/
 
 ---
 
+## ✅ Consejo de seguridad
+
+Consejo: Usa siempre un gestor de contraseñas y habilita 2FA.
+
+---
+
 ## ⚡ Uso de la Aplicacion 
 
 [**¡Haz clic para usar la aplicación en vivo!**](https://felipe-moreno-marciales.github.io/Generador_Contrasenas/)  
