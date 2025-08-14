@@ -34,7 +34,8 @@ Crea contraseñas fuertes, personalizadas y copia al portapapeles con un solo cl
 2. **Selecciona los tipos de caracteres** que quieres incluir.
 3. Haz clic en **"Generar Contraseña"**.
 4. Observa la **calidad de la contraseña** en el indicador.
-5. Presiona **"Copiar"** para guardar la contraseña en tu portapapeles.
+5. Observa el Tiempo estimado para descifrar.
+6. Presiona **"Copiar"** para guardar la contraseña en tu portapapeles.
 
 ---
 
