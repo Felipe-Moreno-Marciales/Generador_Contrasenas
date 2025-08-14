@@ -67,6 +67,7 @@ Generador_Contrasenas/
 - Contraste alto y modo oscuro/ligero
 - Navegación por teclado
 - Consejo de Seguridad
+- Tiempo estimado para descifrar
 
 ---
 
