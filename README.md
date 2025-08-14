@@ -13,7 +13,7 @@ Crea contraseñas fuertes, personalizadas y copia al portapapeles con un solo cl
 - 🛡️ **Personaliza tu contraseña**:  
   - Longitud (8 a 32 caracteres)
   - Mayúsculas, minúsculas, números y símbolos
-- 📊 **Indicador de Calidad de Contraseña:** Evalúa y muestra visualmente la fortaleza de cada contraseña generada (de "Muy Débil" a "Excelente").
+- 📊 **Indicador de Calidad de Contraseña:** Evalúa y muestra visualmente la fortaleza de cada contraseña generada (de "Muy Débil" a "Perfecta").
 - 🌙 **Modo claro/oscuro** con animación visual
 - 📋 **Copia al portapapeles** con feedback visual y accesible
 - ♿ **Accesibilidad**: compatible con lectores de pantalla
@@ -23,7 +23,8 @@ Crea contraseñas fuertes, personalizadas y copia al portapapeles con un solo cl
 
 ## 🖥️ Vista previa
 
-<img width="499" height="853" alt="image" src="https://github.com/user-attachments/assets/9ee5f404-8b2d-45ad-b27a-3ab755b836d6" />
+<img width="468" height="878" alt="image" src="https://github.com/user-attachments/assets/64055960-f18c-4d96-81b1-7e6496cd1440" />
+
 
 ---
 
