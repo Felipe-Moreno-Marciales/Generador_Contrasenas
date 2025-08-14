@@ -339,6 +339,63 @@ input[type="range"]::-moz-range-thumb {
     transition: color var(--transition-speed) ease;
 }
 
+/* --- Tiempo de Descifrado --- */
+.crack-time-container {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 0.75rem;
+    background-color: var(--surface);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-speed) ease;
+}
+
+.crack-time-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin: 0 0 0.5rem 0;
+}
+
+.crack-time-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+    display: block;
+    transition: color var(--transition-speed) ease;
+}
+
+/* --- Mejoras de Rendimiento y Accesibilidad --- */
+
+/* Optimización de animaciones para dispositivos con preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Optimización de rendimiento con will-change */
+.theme-switch__container,
+.crack-time-value,
+#strength-indicator-bar::before {
+    will-change: background-color, color, width;
+}
+
+/* Mejoras en el sistema de notificaciones */
+.visually-hidden.notification-error {
+    color: #dc3545 !important;
+}
+
+.visually-hidden.notification-warning {
+    color: #ffc107 !important;
+}
+
+.visually-hidden.notification-success {
+    color: #28a745 !important;
+}
+
 /* Botón Principal */
 #generateButton {
     width: 100%;
