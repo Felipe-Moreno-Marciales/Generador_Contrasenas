@@ -99,7 +99,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .main-title {
@@ -257,30 +257,30 @@ input[type="range"]::-moz-range-thumb {
 
 /* --- Selector de Color de Acento --- */
 .color-picker-container {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border-color);
+    margin: 0.25rem 0 1rem 0;
+    padding: 0.5rem 0;
 }
 .color-picker-title {
-    text-align: center;
+    text-align: left;
     font-weight: 500;
     color: var(--text-secondary);
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.75rem 0;
+    font-size: 0.9rem;
 }
 .color-options {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: flex-start;
+    gap: 0.75rem;
 }
 .color-options input[type="radio"] {
     display: none; /* Ocultamos el radio button real */
 }
 .color-option {
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     cursor: pointer;
-    border: 3px solid var(--surface);
+    border: 2px solid var(--surface);
     box-shadow: 0 0 0 1px var(--border-color);
     transition: all 0.2s ease;
 }
