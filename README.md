@@ -23,8 +23,7 @@ Crea contraseñas fuertes, personalizadas y copia al portapapeles con un solo cl
 
 ## 🖥️ Vista previa
 
-<img width="468" height="878" alt="image" src="https://github.com/user-attachments/assets/64055960-f18c-4d96-81b1-7e6496cd1440" />
-
+![alt text](image-1.png)
 
 ---
 
