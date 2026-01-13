@@ -168,20 +168,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let score = 0;
         const length = password.length;
 
-        // Contar cuántos tipos de caracteres están seleccionados
-        let checkedOptions = [elements.includeUppercase, elements.includeLowercase, elements.includeNumbers, elements.includeSymbols].filter(el => el.checked).length;
-
         // Análisis mejorado de la contraseña
         const hasUpper = /[A-Z]/.test(password);
         const hasLower = /[a-z]/.test(password);
         const hasNumbers = /\d/.test(password);
         const hasSymbols = /[^A-Za-z0-9]/.test(password);
+        const charTypes = [hasUpper, hasLower, hasNumbers, hasSymbols].filter(Boolean).length;
 
         // Regla especial: si solo hay un tipo de caracter y la longitud es baja, es "Muy Débil"
-        if (checkedOptions === 1 && length >= 8 && length <= 12) {
+        if (charTypes === 1 && length <= 12) {
             score = 1; // Forzar el nivel más bajo
-        } else if (!password) {
-            score = 0;
         } else {
             // Lógica de puntuación mejorada
             if (length >= 8) score++;
@@ -190,7 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (length >= 20) score++;
             
             // Diversidad de caracteres
-            const charTypes = [hasUpper, hasLower, hasNumbers, hasSymbols].filter(Boolean).length;
             score += charTypes;
             
             // Penalización por patrones comunes
@@ -383,6 +378,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     elements.generateButton.addEventListener('click', displayNewPassword);
     elements.copyButton.addEventListener('click', copyPasswordToClipboard);
+    
+    // Permitir ingreso manual de contraseña y actualizar calidad en tiempo real
+    elements.passwordOutput.addEventListener('input', (e) => {
+        const password = e.target.value;
+        checkPasswordStrength(password);
+    });
     
     // Solo usar debounce para los checkboxes, no para el slider
     elements.optionsCheckboxes.forEach(checkbox => {

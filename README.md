@@ -23,8 +23,7 @@ Crea contraseñas fuertes, personalizadas y copia al portapapeles con un solo cl
 
 ## 🖥️ Vista previa
 
-![alt text](image-1.png)
-
+![alt text](image.png)
 ---
 
 ## 🧩 ¿Cómo usar?
