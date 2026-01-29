@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Inicialización Optimizada ---
     const savedTheme = localStorage.getItem('theme') || 'dark';
-    const savedAccentColor = localStorage.getItem('accentColor') || 'purple';
+    const savedAccentColor = localStorage.getItem('accentColor') || 'blue';
     
     applyTheme(savedTheme);
     applyAccentColor(savedAccentColor);
