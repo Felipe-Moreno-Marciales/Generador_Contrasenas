@@ -545,3 +545,243 @@ input[type="range"]::-moz-range-thumb {
 .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__moon { transform: translate(0); }
 .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__clouds { bottom: -4.062em; }
 .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__stars-container { top: 50%; transform: translateY(-50%); }
+
+/* ========================================
+   ESTILOS RESPONSIVE PARA MÓVILES
+   ======================================== */
+
+/* Tablets y dispositivos medianos (768px y menos) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0.75rem;
+        overflow-y: auto;
+    }
+    
+    .container {
+        padding: 1.25rem 1.5rem;
+        border-radius: 16px;
+        max-width: 100%;
+    }
+    
+    .main-title {
+        font-size: 1.3rem;
+    }
+    
+    #passwordOutput {
+        font-size: 1.1rem;
+    }
+    
+    .controls-container {
+        padding: 1.25rem;
+    }
+    
+    .options-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    #generateButton {
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
+}
+
+/* Móviles (480px y menos) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+        align-items: flex-start;
+        padding-top: 1rem;
+    }
+    
+    .container {
+        padding: 1rem 1.25rem;
+        border-radius: 14px;
+        box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .main-title {
+        font-size: 1.15rem;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .theme-switch {
+        --toggle-size: 0.8rem;
+    }
+    
+    /* Selector de colores */
+    .color-picker-container {
+        margin: 0.5rem 0 0.75rem 0;
+    }
+    
+    .color-picker-title {
+        font-size: 0.85rem;
+    }
+    
+    .color-options {
+        gap: 0.6rem;
+        flex-wrap: wrap;
+    }
+    
+    .color-option {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Display de contraseña */
+    .password-display {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+    
+    #passwordOutput {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    
+    #copyButton {
+        width: 100%;
+        justify-content: center;
+        padding: 0.7rem 1rem;
+    }
+    
+    #copyButtonText {
+        display: inline;
+    }
+    
+    /* Controles */
+    .controls-container {
+        padding: 1rem;
+    }
+    
+    .length-option {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    
+    #lengthValue {
+        font-size: 1.1rem;
+    }
+    
+    input[type="range"] {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Grid de opciones en una columna para móviles pequeños */
+    .options-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+    
+    .option {
+        padding: 0.65rem;
+    }
+    
+    .option label {
+        font-size: 0.9rem;
+    }
+    
+    /* Indicador de fortaleza */
+    #strength-indicator-container {
+        margin-bottom: 1.5rem;
+    }
+    
+    .strength-title {
+        font-size: 0.9rem;
+    }
+    
+    #strength-indicator-text {
+        font-size: 0.85rem;
+    }
+    
+    .crack-time-container {
+        padding: 0.6rem;
+    }
+    
+    .crack-time-title {
+        font-size: 0.8rem;
+    }
+    
+    .crack-time-value {
+        font-size: 1rem;
+    }
+    
+    /* Consejo de seguridad */
+    .security-tip {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .security-tip svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    /* Botón generar */
+    #generateButton {
+        padding: 0.85rem;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+}
+
+/* Móviles muy pequeños (320px y menos) */
+@media screen and (max-width: 320px) {
+    body {
+        padding: 0.25rem;
+    }
+    
+    .container {
+        padding: 0.85rem 1rem;
+    }
+    
+    .main-title {
+        font-size: 1rem;
+    }
+    
+    .theme-switch {
+        --toggle-size: 0.7rem;
+    }
+    
+    #passwordOutput {
+        font-size: 0.9rem;
+    }
+    
+    .option label {
+        font-size: 0.85rem;
+    }
+    
+    #generateButton {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}
+
+/* Ajuste para pantallas en modo landscape (horizontal) en móviles */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    body {
+        align-items: flex-start;
+        padding: 0.5rem;
+    }
+    
+    .container {
+        max-height: none;
+    }
+    
+    .options-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #strength-indicator-container {
+        margin-bottom: 1rem;
+    }
+}
