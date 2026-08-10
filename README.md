@@ -87,7 +87,7 @@ Consejo: Usa siempre un gestor de contraseñas y habilita 2FA.
 
 ## � Licencia
 
-Este proyecto está bajo la Licencia **GPL-3.0**. Consulta el archivo `LICENSE` para más detalles.
+Este proyecto está bajo la Licencia **AGPL-3.0**. Consulta el archivo `LICENSE` para más detalles.
 
 ---
 
